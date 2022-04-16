@@ -10,3 +10,7 @@ To run the program, simply open up a cmd terminal **in the directory where the p
 Afterwards, execute the following statement:
 python zombieschallenges1.0py
 
+Changelog:
+
+1.0  - Released April 16th,  2022
+Full release.
