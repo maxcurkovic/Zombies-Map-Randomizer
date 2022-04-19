@@ -14,4 +14,5 @@ Changelog:
 
 1.0  - Released April 16th,  2022
 Full release.
+
 1.0.1 - Released April 19th, 2022 Finished full functionality of UI, added a couple of new challenges
