@@ -16,3 +16,5 @@ Changelog:
 Full release.
 
 1.0.1 - Released April 19th, 2022 Finished full functionality of UI, added a couple of new challenges
+
+1.1 - Releaed March 10th, 2023. Added a new mode to randomize all added maps, including non-custom AND custom maps.
