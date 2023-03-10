@@ -4,16 +4,20 @@ treyarch_maps = ["Nacht Der Untoten", "Verruckt", "Shi No Numa", "Der Riese", "K
 non_treyarch_maps = ["Outbreak", "Infection", "Carrier", "Descent", "Zombies in Spaceland", "Rave in the Redwoods", "Shaolin Shuffle", "Attack of the Radioactive Thing", "The Beast from Beyond", "Groesten Haus", "The Final Reich", "The Darkest Shore", "The Shadowed Throne", "The Tortured Path", "The Frozen Dawn"]
 challenges = [["High Round Attempt", "Get to the highest round possible!"], ["Normal", "Play as you would a normal game."], ["No Perks", "No perks allowed!"], ["No Gobblegums", "No gobblegums allowed!"],["No Pack-A-Punch", "You cannot use the PaP machine!"], ["Starting Room Challenge", "You cannot leave the starting room at any point!"], ["Gun Game", "You must switch guns from the Mystery Box every round, starting on round 7!"], ["No Juggernog Challenge","This one is self explanatory."],["Two Box Challenge","You may only hit the Mystery Box twice in your game. You must keep those weapons, no wall weapons allowed. You may hit the box again should you get Mule Kick, but same rule applies!"],["Easter Egg Challenge","Complete the Easter Egg on the map. If there is no Easter Egg, pick a different challenge!"],["Rainbow Perk Challenge","Acquire all perks on the map in rainbow order! Order is as follows: Juggernog, Vulture Aid, Double Tap, Stamin-Up, Speed Cola, Mule Kick, Quick Revive, Who's Who, Electric Cherry, Deadshot Daquiri, Tombstone, PhD Flopper and Widows Wine!"]]
 custom_maps = []
+all_maps = treyarch_maps + non_treyarch_maps
+
 infinite = 1
+
 def main_menu():
     print("Zombies Map Randomizer, alpha version by Max Curkovic")
-    print("Updated: April 14th, 2022. To exit, press Q.")
+    print("Updated: March 7th, 2023. To exit, press Q.")
     print("1. Select a random Treyarch map")
     print("2. Select a random non-Treyarch map")
     print("3. Select a random challenge")
     print("4. Create your own list of maps to randomize")
     print("5. Randomize your custom map list")
-    print("6. Add a custom challenge")
+    print("6. Select a random map from all maps in existence")
+    print("7. Add a custom challenge")  
     user_interface()
 
 def return_to_menu():
@@ -51,6 +55,7 @@ def user_interface():
             print("Please enter a new map: ")
             new_map = str(input())
             custom_maps.append(new_map)
+            all_maps.append(new_map)
             print("Your map, " + new_map + ", has been inputted. Add another? N to return to menu, any other key to continue")
             return_to_menu()
         elif choice == "5":
@@ -65,6 +70,10 @@ def user_interface():
                     print()
                     main_menu()
         elif choice == "6":
+            print("The map you will play is: " + random.choice(all_maps))
+            print("Spin again? N to return to menu, any other key to continue")
+            return_to_menu()            
+        elif choice == "7":
             challenge_name = str(input("Enter the name of your challenge."))
             challenge_desc = str(input("Enter the description of your challenge."))
             challenges.append([challenge_name, challenge_desc])
